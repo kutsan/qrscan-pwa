@@ -1,0 +1,40 @@
+.results {
+  width: 100%;
+  max-width: 600px;
+}
+
+.results__data {
+  padding-bottom: 80px;
+
+  font-size: 1.3rem;
+}
+
+.results__button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.results__button {
+  padding: 10px;
+
+  cursor: pointer;
+  transition-duration: 300ms;
+  transition-property: background-color, color, transform;
+
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: hsla(197, 100%, 63%, 1);
+
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.results__button:hover {
+  color: white;
+  background-color: hsla(294, 100%, 55%, 1);
+}
+
+.results__button:active {
+  transform: translateY(2px);
+}
