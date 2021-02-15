@@ -1,0 +1,26 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+  padding: 20px;
+
+  font-size: 0.8rem;
+}
+
+.footer__project-link {
+  padding: 3px 7px;
+
+  text-decoration: none;
+
+  color: black;
+  border-radius: 8px;
+  background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+
+  font-weight: 500;
+}
+
+.footer__text {
+  margin-right: 5px;
+}

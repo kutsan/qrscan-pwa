@@ -1,0 +1,43 @@
+.scanner {
+  width: 100%;
+  max-width: 500px;
+}
+
+.scanner--hidden {
+  display: none;
+}
+
+.scanner__aspect-ratio-container {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-bottom: 100%;
+
+  border-radius: 10%;
+}
+
+.scanner__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+
+  width: 100%;
+  height: 100%;
+
+  outline: none;
+}
+
+.scanner__canvas {
+  display: none;
+}
+
+.scanner-tip {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 15px;
+
+  font-size: 0.8rem;
+}
