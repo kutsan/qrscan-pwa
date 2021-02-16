@@ -6,6 +6,8 @@
 .results__data {
   padding-bottom: 80px;
 
+  word-break: break-all;
+
   font-size: 1.3rem;
 }
 
