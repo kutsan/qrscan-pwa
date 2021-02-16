@@ -1,6 +1,6 @@
 # `qrscan-pwa`
 
-![screenshot](https://raw.githubusercontent.com/kutsan/qrscan-pwa/master/.github/banner.png)
+![banner](https://raw.githubusercontent.com/kutsan/qrscan-pwa/master/.github/banner.png)
 
 <p align="center">
   <img alt="screenshots" src="https://raw.githubusercontent.com/kutsan/qrscan-pwa/master/.github/screenshots.png">
