@@ -37,7 +37,7 @@ export default defineConfig({
           },
         ],
         background_color: '#000000',
-        start_url: '/source=pwa',
+        start_url: '/',
         display: 'standalone',
         scope: '/',
         theme_color: '#000000',
