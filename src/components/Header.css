@@ -20,11 +20,7 @@ header {
 }
 
 .header__logo {
-  width: 4rem;
   margin-right: 20px;
-
-  border-radius: 20%;
-  background: linear-gradient(135deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
 }
 
 .header__text-container {

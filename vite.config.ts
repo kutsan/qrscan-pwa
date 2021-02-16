@@ -26,8 +26,14 @@ export default defineConfig({
           'A simple offline QR code scanner as a progressive web application, works offline, no ads, no trackers, free & open-source.',
         icons: [
           {
-            src: '/logo.svg',
+            src: '/logo-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/logo-512x512.png',
             sizes: '512x512',
+            type: 'image/png',
           },
         ],
         background_color: '#000000',
