@@ -1,11 +1,17 @@
 import React, { ReactElement } from 'react'
 
 import './Header.css'
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo-64x64.png'
 
 const Header = (): ReactElement => (
   <header>
-    <img src={logo} className="header__logo" alt="logo" />
+    <img
+      src={logo}
+      width={64}
+      height={64}
+      className="header__logo"
+      alt="logo"
+    />
 
     <div className="header__text-container">
       <div className="header__title">qrscan-pwa</div>
