@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react'
 
 import './Results.css'
+import scanIcon from '../assets/scan.svg'
 
 const Results = ({
   active,
@@ -20,9 +21,16 @@ const Results = ({
 
   let data
 
-  if (decodedData.match(regex)) {
+  if (decodedData === '') {
+    data = <span className="results__empty">There is no data to show.</span>
+  } else if (decodedData.match(regex)) {
     data = (
-      <a href={decodedData} target="_blank" rel="noopener noreferrer">
+      <a
+        className="results__link"
+        href={decodedData}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {decodedData}
       </a>
     )
@@ -32,12 +40,13 @@ const Results = ({
 
   return (
     <div className="results">
-      <h2>Decoded Data</h2>
+      <h2 className="results__title">Decoded Data</h2>
 
       <div className="results__data">{data}</div>
       <div className="results__button-container">
         <button type="button" className="results__button" onClick={onNewScan}>
-          New Scan
+          <img className="results__scan-icon" src={scanIcon} alt="New Scan" />
+          <span>New Scan</span>
         </button>
       </div>
     </div>

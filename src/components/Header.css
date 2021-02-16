@@ -8,7 +8,7 @@ header::before {
 
   content: "";
 
-  background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+  background: linear-gradient(90deg, #ff006a, #33006a 90%);
 }
 
 header {
