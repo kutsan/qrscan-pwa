@@ -13,6 +13,7 @@
   "scripts": {
     "prestart": "npm run format && npm run lint",
     "start": "vite",
+    "dev": "vite",
     "serve": "vite preview",
     "prebuild": "npm run prestart",
     "build": "tsc && vite build",
