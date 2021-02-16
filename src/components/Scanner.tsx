@@ -9,7 +9,7 @@ import useUserMedia from '../hooks/use-usermedia'
 
 const Scanner = ({
   active,
-  onSuccessfulScan: onScan,
+  onSuccessfulScan,
 }: {
   active: boolean
   onSuccessfulScan: (data: string) => void
@@ -46,7 +46,7 @@ const Scanner = ({
     if (qrCode === null) {
       setTimeout(startCapturing, 500)
     } else {
-      onScan(qrCode.data)
+      onSuccessfulScan(qrCode.data)
 
       stopMediaStream()
       video.current.srcObject = null
