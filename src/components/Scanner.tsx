@@ -44,7 +44,7 @@ const Scanner = ({
     const qrCode = jsQR(imageData.data, width, height)
 
     if (qrCode === null) {
-      setTimeout(startCapturing, 1000)
+      setTimeout(startCapturing, 500)
     } else {
       onScan(qrCode.data)
 
