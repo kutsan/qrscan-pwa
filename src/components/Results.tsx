@@ -32,7 +32,7 @@ const Results = ({
 
   return (
     <div className="results">
-      <h1>Decoded Data</h1>
+      <h2>Decoded Data</h2>
 
       <div className="results__data">{data}</div>
       <div className="results__button-container">
