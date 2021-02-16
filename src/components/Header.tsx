@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 
 import './Header.css'
-import logo from '../assets/logo-64x64.png'
+import logo from '../assets/logo.svg'
 
 const Header = (): ReactElement => (
   <header>
