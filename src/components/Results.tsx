@@ -40,8 +40,6 @@ const Results = ({
 
   return (
     <div className="results">
-      <h2 className="results__title">Decoded Data</h2>
-
       <div className="results__data">{data}</div>
       <div className="results__button-container">
         <button type="button" className="results__button" onClick={onNewScan}>
