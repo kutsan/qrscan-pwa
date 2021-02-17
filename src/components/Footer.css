@@ -18,13 +18,13 @@ footer {
 
   color: white;
   border-radius: 20px;
-  background: #ff006a;
+  background-color: #161616;
 
   font-weight: 500;
 }
 
 .footer__project-link:hover {
-  background: #33006a;
+  background-color: #d50058;
 }
 
 .footer__text {
