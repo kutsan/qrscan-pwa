@@ -1,17 +1,11 @@
 .results {
   width: 100%;
   max-width: 500px;
-  margin-top: 10px;
-}
-
-.results__title {
-  margin-left: 10px;
 }
 
 .results__data {
-  margin-bottom: 80px;
-  padding: 20px;
-  padding-bottom: 27px;
+  margin: 50px 0 80px 0;
+  padding: 20px 20px 27px 20px;
 
   word-break: break-all;
 
