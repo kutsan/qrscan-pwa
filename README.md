@@ -6,7 +6,7 @@
   <img alt="screenshots" src="https://raw.githubusercontent.com/kutsan/qrscan-pwa/master/.github/screenshots.png">
 </p>
 
-> A simple QR code scanner as a progressive web application, works offline, no ads, no trackers, written in React and TypeScript.
+> A simple QR code scanner as a progressive web application, works offline, no ads, no trackers, written in Preact and TypeScript.
 
 Project is live and available at https://qrscan-pwa.kutsankaplan.com.
 
