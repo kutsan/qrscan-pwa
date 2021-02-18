@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 
 import './Results.css'
 import scanIcon from '../assets/scan.svg'

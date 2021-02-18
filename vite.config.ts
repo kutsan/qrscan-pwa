@@ -1,22 +1,32 @@
 import { defineConfig } from 'vite'
 
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import preactRefresh from '@prefresh/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { minifyHtml } from 'vite-plugin-html'
 
 export default defineConfig({
   root: './src',
   server: {
-    https: true,
-    host: '0.0.0.0',
+    https: true, // MediaDevices API requires a secure connection.
   },
   build: {
     outDir: '../dist',
     assetsDir: './',
     emptyOutDir: true,
   },
+  esbuild: {
+    jsxFactory: 'h',
+    jsxFragment: 'Fragment',
+    jsxInject: `import { h, Fragment } from 'preact'`,
+  },
+  resolve: {
+    alias: [
+      { find: 'react', replacement: 'preact/compat' },
+      { find: 'react-dom', replacement: 'preact/compat' },
+    ],
+  },
   plugins: [
-    reactRefresh(),
+    preactRefresh(),
     minifyHtml(),
     VitePWA({
       manifest: {

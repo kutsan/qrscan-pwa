@@ -1,4 +1,4 @@
-import React, { ReactElement, useRef, useEffect } from 'react'
+import { ReactElement, useRef, useEffect } from 'react'
 import jsQR from 'jsqr'
 
 import './Scanner.css'
