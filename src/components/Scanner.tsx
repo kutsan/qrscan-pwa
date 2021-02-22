@@ -84,7 +84,7 @@ const Scanner = ({
     }
 
     video.current.srcObject = stream
-    video.current.play().catch(() => {})
+    video.current.play().catch(console.error)
   }, [status, stream])
 
   useEffect(() => {
