@@ -25,14 +25,19 @@ const Scanner = ({
     startMediaStream,
   } = useUserMedia()
 
-  const startCapturing = async () => {
-    if (!canvas || !canvas.current || !video || !video.current) {
+  const startCapturing = (): void => {
+    if (
+      canvas === null ||
+      canvas.current === null ||
+      video === null ||
+      video.current === null
+    ) {
       return
     }
 
     const context = canvas.current.getContext('2d')
 
-    if (!context) {
+    if (context === null) {
       return
     }
 
@@ -53,8 +58,13 @@ const Scanner = ({
     }
   }
 
-  const handleCanPlay = () => {
-    if (!canvas || !canvas.current || !video || !video.current) {
+  const handleCanPlay = (): void => {
+    if (
+      canvas === null ||
+      canvas.current === null ||
+      video === null ||
+      video.current === null
+    ) {
       return
     }
 
@@ -69,19 +79,19 @@ const Scanner = ({
   }
 
   useEffect(() => {
-    if (status !== 'resolved' || !video || !video.current) {
+    if (status !== 'resolved' || video === null || video.current === null) {
       return
     }
 
     video.current.srcObject = stream
-    video.current.play()
+    video.current.play().catch(() => {})
   }, [status, stream])
 
   useEffect(() => {
     if (active && status === 'stopped') {
       startMediaStream()
     }
-  }, [active])
+  }, [active, status, startMediaStream])
 
   return (
     <div className={`scanner ${active ? '' : 'scanner--hidden'}`}>
