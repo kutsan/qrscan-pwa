@@ -4,6 +4,6 @@ module.exports = {
   extends: [
     require.resolve('@kutsan/config/eslint'),
     require.resolve('@kutsan/config/eslint/ts'),
-    require.resolve('@kutsan/config/eslint/tsx'),
-  ],
+    require.resolve('@kutsan/config/eslint/tsx')
+  ]
 }
