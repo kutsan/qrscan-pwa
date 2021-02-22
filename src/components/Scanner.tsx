@@ -9,7 +9,7 @@ import useUserMedia from '../hooks/use-usermedia'
 
 const Scanner = ({
   active,
-  onSuccessfulScan,
+  onSuccessfulScan
 }: {
   active: boolean
   onSuccessfulScan: (data: string) => void
@@ -22,7 +22,7 @@ const Scanner = ({
     error,
     status,
     stopMediaStream,
-    startMediaStream,
+    startMediaStream
   } = useUserMedia()
 
   const startCapturing = (): void => {

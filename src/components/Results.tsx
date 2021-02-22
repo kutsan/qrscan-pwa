@@ -6,7 +6,7 @@ import scanIcon from '../assets/scan.svg'
 const Results = ({
   active,
   decodedData,
-  onNewScan,
+  onNewScan
 }: {
   active: boolean
   decodedData: string

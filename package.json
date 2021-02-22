@@ -30,7 +30,7 @@
     "preact": "^10.5.12"
   },
   "devDependencies": {
-    "@kutsan/config": "^0.10.1",
+    "@kutsan/config": "^0.11.0",
     "@prefresh/vite": "^2.1.0",
     "@rushstack/eslint-patch": "^1.0.6",
     "@types/react": "^17.0.2",

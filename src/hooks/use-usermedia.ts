@@ -25,8 +25,8 @@ const useUserMedia = (): UseUserMediaType => {
       .getUserMedia({
         audio: false,
         video: {
-          facingMode: 'environment',
-        },
+          facingMode: 'environment'
+        }
       })
       .then((userStream) => {
         setStream(userStream)
