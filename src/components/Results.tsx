@@ -23,7 +23,7 @@ const Results = ({
 
   if (decodedData === '') {
     data = <span className="results__empty">There is no data to show.</span>
-  } else if (decodedData.match(regex)) {
+  } else if (decodedData.match(regex) !== null) {
     data = (
       <a
         className="results__link"
