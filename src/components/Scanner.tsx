@@ -17,13 +17,8 @@ const Scanner = ({
   const video = useRef<HTMLVideoElement>(null)
   const canvas = useRef<HTMLCanvasElement>(null)
 
-  const {
-    stream,
-    error,
-    status,
-    stopMediaStream,
-    startMediaStream
-  } = useUserMedia()
+  const { stream, error, status, stopMediaStream, startMediaStream } =
+    useUserMedia()
 
   const startCapturing = (): void => {
     if (
