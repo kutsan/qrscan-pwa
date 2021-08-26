@@ -1,6 +1,6 @@
 {
   "name": "qrscan-pwa",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "private": true,
   "description": "A simple offline QR code scanner as a progressive web application, works offline, no ads, no trackers, free & open-source.",
   "homepage": "https://github.com/kutsan/qrscan-pwa",
