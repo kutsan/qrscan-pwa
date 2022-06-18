@@ -3,7 +3,7 @@ import { ReactElement } from 'react'
 import './Results.css'
 import scanIcon from '../assets/scan.svg'
 
-const Results = ({
+export const Results = ({
   active,
   decodedData,
   onNewScan
@@ -51,5 +51,3 @@ const Results = ({
     </div>
   )
 }
-
-export default Results

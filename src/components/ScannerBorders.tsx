@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 
 import './ScannerBorders.css'
 
-const ScannerBorders = (): ReactElement => (
+export const ScannerBorders = (): ReactElement => (
   <>
     <div className="scanner-border scanner-border--top-left" />
     <div className="scanner-border scanner-border--top-right" />
@@ -10,5 +10,3 @@ const ScannerBorders = (): ReactElement => (
     <div className="scanner-border scanner-border--bottom-right" />
   </>
 )
-
-export default ScannerBorders

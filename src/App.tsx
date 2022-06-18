@@ -2,12 +2,12 @@ import { ReactElement, useState } from 'react'
 
 import './App.css'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Results from './components/Results'
-import Scanner from './components/Scanner'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
+import { Results } from './components/Results'
+import { Scanner } from './components/Scanner'
 
-const App = (): ReactElement => {
+export const App = (): ReactElement => {
   const [result, setResult] = useState<string | null>(null)
 
   return (
@@ -33,5 +33,3 @@ const App = (): ReactElement => {
     </>
   )
 }
-
-export default App
