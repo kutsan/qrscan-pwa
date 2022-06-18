@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 
 import './Footer.css'
 
-const Footer = (): ReactElement => (
+export const Footer = (): ReactElement => (
   <footer>
     <span className="footer__text">Source-code available at</span>
     <a
@@ -15,5 +15,3 @@ const Footer = (): ReactElement => (
     </a>
   </footer>
 )
-
-export default Footer

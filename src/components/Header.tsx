@@ -3,7 +3,7 @@ import { ReactElement } from 'react'
 import './Header.css'
 import logo from '../assets/logo.svg'
 
-const Header = (): ReactElement => (
+export const Header = (): ReactElement => (
   <header>
     <img
       src={logo}
@@ -19,5 +19,3 @@ const Header = (): ReactElement => (
     </div>
   </header>
 )
-
-export default Header

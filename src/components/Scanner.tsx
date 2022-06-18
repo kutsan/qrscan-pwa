@@ -3,11 +3,11 @@ import jsQR from 'jsqr'
 
 import './Scanner.css'
 
-import ScannerBorders from './ScannerBorders'
+import { ScannerBorders } from './ScannerBorders'
 
 import useUserMedia from '../hooks/use-usermedia'
 
-const Scanner = ({
+export const Scanner = ({
   active,
   onSuccessfulScan
 }: {
@@ -106,5 +106,3 @@ const Scanner = ({
     </div>
   )
 }
-
-export default Scanner
