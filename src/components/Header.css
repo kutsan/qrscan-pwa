@@ -6,7 +6,7 @@ header::before {
   width: 100%;
   height: 4px;
 
-  content: "";
+  content: '';
 
   background: linear-gradient(90deg, #ff006a, #33006a 90%);
 }
@@ -21,6 +21,9 @@ header {
 
 .header__logo {
   margin-right: 20px;
+
+  user-select: none;
+  pointer-events: none;
 }
 
 .header__text-container {

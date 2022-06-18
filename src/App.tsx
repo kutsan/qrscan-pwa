@@ -1,11 +1,10 @@
 import { ReactElement, useState } from 'react'
 
-import './App.css'
-
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Results } from './components/Results'
 import { Scanner } from './components/Scanner'
+import './App.css'
 
 export const App = (): ReactElement => {
   const [result, setResult] = useState<string | null>(null)
@@ -21,11 +20,7 @@ export const App = (): ReactElement => {
         />
 
         {result !== null && (
-          <Results
-            active={result !== null}
-            decodedData={result}
-            onNewScan={() => setResult(null)}
-          />
+          <Results decodedData={result} onNewScan={() => setResult(null)} />
         )}
       </main>
 
