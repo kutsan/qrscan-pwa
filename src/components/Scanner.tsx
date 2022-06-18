@@ -1,11 +1,9 @@
 import { ReactElement, useRef, useEffect } from 'react'
 import jsQR from 'jsqr'
 
-import './Scanner.css'
-
 import { ScannerBorders } from './ScannerBorders'
-
-import useUserMedia from '../hooks/use-usermedia'
+import { useUserMedia } from '../hooks/use-usermedia'
+import './Scanner.css'
 
 export const Scanner = ({
   active,
@@ -58,19 +56,15 @@ export const Scanner = ({
       canvas === null ||
       canvas.current === null ||
       video === null ||
-      video.current === null
+      video.current === null ||
+      error === null
     ) {
       return
     }
 
     canvas.current.width = video.current.videoWidth
     canvas.current.height = video.current.videoHeight
-
-    if (error !== null) {
-      // TODO: show dialog to user with an error
-    } else {
-      startCapturing()
-    }
+    startCapturing()
   }
 
   useEffect(() => {
@@ -78,6 +72,7 @@ export const Scanner = ({
       return
     }
 
+    video.current.setAttribute('muted', '')
     video.current.srcObject = stream
     video.current.play().catch(console.error)
   }, [status, stream])
@@ -93,11 +88,30 @@ export const Scanner = ({
       <div className="scanner__aspect-ratio-container">
         <canvas ref={canvas} className="scanner__canvas" />
         <video
+          muted
+          playsInline
           ref={video}
           onCanPlay={handleCanPlay}
           className="scanner__video"
         />
         <ScannerBorders />
+
+        {status === 'pending' && (
+          <button
+            className="scanner__button"
+            type="button"
+            onClick={() => startMediaStream()}
+          >
+            Request Camera Permission
+          </button>
+        )}
+
+        {status === 'rejected' && (
+          <div className="scanner__rejected-message">
+            <h2>Scanning Unavailable</h2>
+            <p>This app does not have permission to access the camera.</p>
+          </div>
+        )}
       </div>
 
       <div className="scanner-tip">

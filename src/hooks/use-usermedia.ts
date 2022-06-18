@@ -4,7 +4,12 @@ const isMediaStream = (
   candidate: MediaStream | MediaSource | Blob | null
 ): candidate is MediaStream => candidate !== null && 'getTracks' in candidate
 
-type UseUserMediaStatusType = 'pending' | 'resolved' | 'rejected' | 'stopped'
+type UseUserMediaStatusType =
+  | 'idle'
+  | 'pending'
+  | 'resolved'
+  | 'rejected'
+  | 'stopped'
 interface UseUserMediaType {
   stream: MediaStream | null
   error: Error | null
@@ -13,14 +18,12 @@ interface UseUserMediaType {
   startMediaStream: () => void
 }
 
-const useUserMedia = (): UseUserMediaType => {
+export const useUserMedia = (): UseUserMediaType => {
   const [stream, setStream] = useState<MediaStream | null>(null)
   const [error, setError] = useState<Error | null>(null)
-  const [status, setStatus] = useState<UseUserMediaStatusType>('pending')
+  const [status, setStatus] = useState<UseUserMediaStatusType>('idle')
 
   const startMediaStream = (): void => {
-    setStatus('pending')
-
     navigator.mediaDevices
       .getUserMedia({
         audio: false,
@@ -39,7 +42,18 @@ const useUserMedia = (): UseUserMediaType => {
   }
 
   useEffect(() => {
-    startMediaStream()
+    ;(async () => {
+      const devices = await navigator.mediaDevices.enumerateDevices()
+      const cameraIsPermitted = devices.some(
+        (device) => device.label !== '' && device.kind === 'videoinput'
+      )
+
+      if (cameraIsPermitted) {
+        startMediaStream()
+      } else {
+        setStatus('pending')
+      }
+    })().catch(console.error)
   }, [])
 
   const stopMediaStream = (): void => {
@@ -55,5 +69,3 @@ const useUserMedia = (): UseUserMediaType => {
 
   return { stream, error, status, stopMediaStream, startMediaStream }
 }
-
-export default useUserMedia

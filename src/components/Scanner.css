@@ -31,6 +31,50 @@
   object-fit: cover;
 }
 
+.scanner__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  min-width: 200px;
+  padding: 14px 16px;
+
+  cursor: pointer;
+  transition-duration: 300ms;
+  transition-property: background-color, transform;
+
+  transform: translate(-50%, -50%);
+
+  color: white;
+
+  border: 0;
+  border-radius: 100vmax;
+  background-color: #ff006a;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.scanner__button:hover {
+  background-color: #d50058;
+}
+
+.scanner__rejected-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  max-width: 300px;
+
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .scanner__canvas {
   display: none;
 }
@@ -40,6 +84,8 @@
   justify-content: center;
 
   margin-top: 15px;
+
+  text-align: center;
 
   font-size: 0.8rem;
 }
