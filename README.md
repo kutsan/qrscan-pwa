@@ -1,9 +1,9 @@
-# `qrscan-pwa`
+<img width="100" src="https://github.com/kutsan/qrscan-pwa/raw/master/.github/assets/logo.png" alt="Logo" />
 
-![banner](https://raw.githubusercontent.com/kutsan/qrscan-pwa/master/.github/banner.png)
+# qrscan-pwa
 
 <p align="center">
-  <img alt="screenshots" src="https://raw.githubusercontent.com/kutsan/qrscan-pwa/master/.github/screenshots.png">
+  <img alt="screenshots" src="https://github.com/kutsan/qrscan-pwa/raw/master/.github/assets/screenshots.png">
 </p>
 
 > A simple QR code scanner as a progressive web application, works offline, no ads, no trackers, written in Preact and TypeScript.
